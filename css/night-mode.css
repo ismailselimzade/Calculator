@@ -1,0 +1,256 @@
+/*? @css-in default olculerini sifirlamaq */
+
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+html {
+  touch-action: manipulation;
+}
+
+html,
+body,
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  background-color: #f1f2f3;
+  font-family: "Work Sans", sans-serif;
+  transition: all .5s;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+button {
+  border: none;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+main {
+  width: 728px;
+  margin: 0 auto;
+  margin-top: 3.2rem;
+  margin-bottom: 3.2rem;
+  user-select: none;
+}
+
+section {
+  width: 100%;
+}
+
+input {
+  border: none;
+  color: #000000;
+}
+
+/* @fonts */
+
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* @theme */
+
+.theme {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15rem;
+}
+
+#sun {
+  margin-right: 1.2rem;
+}
+
+.theme-content {
+  position: relative;
+  background-color: #ffffff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 1.6rem;
+  cursor: pointer;
+}
+
+.theme-content .ball {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background-color: #4e505f;
+  border-radius: 50%;
+  display: flex !important;
+  justify-content: flex-end;
+  align-items: end;
+  transition: all 0.3s;
+}
+
+.light {
+  animation: lightTheme 0.3s linear forwards;
+}
+
+.night {
+  animation: nightTheme 0.3s linear forwards;
+}
+
+@keyframes lightTheme {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(36px);
+  }
+}
+
+@keyframes nightTheme {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-36px);
+  }
+}
+/* @calculator  */
+
+.calculator {
+  width: 90%;
+  margin: 0 auto;
+
+}
+
+.calculator-keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.6rem;
+}
+
+.calculator button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1.2rem;
+  border-radius: 2.4rem;
+  background-color: #FFFFFF;
+  color: #000000;
+  font-size: 2.4rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+#input,
+#result {
+  justify-content: end;
+  text-align: end;
+  background-color: transparent;
+  cursor: text;
+  width: 100%;
+}
+
+#equal {
+  grid-row: 5;
+  grid-column: 3;
+}
+
+#input {
+  opacity: 0.4;
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 0.1rem;
+}
+
+#result {
+  font-size: 5.5rem;
+  margin-bottom: 1.6rem;
+}
+
+.grey {
+  background-color: #D2D3DA !important;
+}
+.grey:hover {
+  background-color: #a8a9af !important;
+}
+
+.blue {
+  background-color: #505dda !important;
+  color: #FFFFFF!important;
+}
+
+.blue:hover {
+  background-color: #3a45a5 !important;
+}
+
+.dark:hover {
+  background-color: #d8d8d8;
+}
+
+#C {
+  background-color: rgb(204, 47, 41);
+  color: #f5fae6;
+}
+
+#C:hover {
+  background-color: rgb(167, 43, 39);
+}
+
+#equal {
+  background-color: rgb(228, 88, 37);
+  color: #ffffff;
+}
+#equal:hover {
+  background-color: rgb(185, 72, 30);
+}
+
+#delete {
+  background-color: transparent;
+}
+
+#delete i {
+  color: rgb(26, 23, 26) !important;
+}
+
+#delete i:hover {
+  color: rgb(73, 65, 64) !important;
+}
+
+
+/* @responsive */
+
+@media screen and (max-width: 768px) {
+  main {
+    width: 90%;
+  }
+  html {
+    font-size: 9px;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  html {
+    font-size: 8px;
+  }
+}
